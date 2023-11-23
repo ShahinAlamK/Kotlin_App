@@ -5,29 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:layout_marginHorizontal="15dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:text="Hello Bangladesh"
-        />
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/dialog_Id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click Me"
+        android:text="@string/dialog_box"
         android:textSize="15sp"
         android:gravity="center"
         android:padding="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/snack_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/snack_bar"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/toast_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toast_show"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
