@@ -30,23 +30,26 @@ class MainActivity : AppCompatActivity() {
         }
 
         toastBtn.setOnClickListener {
-            Toast.makeText(this,"Hello Kotlin Developer",Toast.LENGTH_SHORT)
-                .show()
+           customToast("Hello Kotlin Developer")
         }
 
         dialogBtn.setOnClickListener {
             val dialog=AlertDialog.Builder(this)
             dialog.setTitle("Are you Developer")
             dialog.setMessage("Yes i'm kotlin developer")
-            dialog.setPositiveButton("Yes"){exite, which->
-                Toast.makeText(this,"Hello Kotlin Developer",Toast.LENGTH_SHORT).show()}
-            dialog.setNegativeButton("Cancel"){exite, which->
-                Toast.makeText(this,"Hello Kotlin Developer",Toast.LENGTH_SHORT).show()}
 
-            val builDialog : AlertDialog= dialog.create()
-            builDialog.show()
+            dialog.setPositiveButton("Yes"){ _, _ -> customToast("Yes")}
+
+            dialog.setNegativeButton("Cancel"){ _, _ -> customToast("Cancel")}
+
+            val buildDialog : AlertDialog= dialog.create()
+            buildDialog.show()
         }
 
+    }
 
+    fun customToast( msg : String){
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT)
+            .show()
     }
 }
